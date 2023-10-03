@@ -3,6 +3,12 @@ const btnAction = document.getElementById("btn");
 btnAction.addEventListener("click", function() {
 
     const textBox = document.getElementById("input").value;
+
+    if(textBox.trim() === "") {
+        document.getElementById("saida").innerHTML = "Insira algo no campo"
+        return;
+    }
+
     const containerList = document.createElement("div");
     containerList.className = "card-notas";
     const textElement = document.createElement("p");
