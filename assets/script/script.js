@@ -1,10 +1,10 @@
 const btnAction = document.getElementById("btn");
 
 btnAction.addEventListener("click", function() {
-
+     document.getElementById("saida").innerHTML = ''
     const textBox = document.getElementById("input").value;
 
-    if(textBox.trim() === "") {
+    if(!textBox) {
         document.getElementById("saida").innerHTML = "Insira algo no campo"
         return;
     }
