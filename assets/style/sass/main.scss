@@ -1,0 +1,125 @@
+@import "variables";
+@import "fonts";
+@import "mixin";
+@import "global";
+
+/* main */
+main {
+    @include flex(column);
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #dadada;
+
+    h1{
+        color: $cor-fundo;
+    }
+
+}
+/* main */
+
+.div-nota-add{
+    @include flex(column);
+    width: 50%;
+
+    input{
+        background-color: transparent;
+        border-bottom: 2px solid rgb(206, 206, 206);
+        padding: 8px;
+        font-size: $font;
+        width: 30%;
+        color: $other-color;
+        font-size: $font;
+        margin-bottom: 2%;
+
+        &:focus{
+            border-bottom: 2px solid rgb(69, 173, 69);
+        }
+
+    }
+
+    button{
+        padding: 10px;
+        width: 30%;
+        font-size: $font;
+        border-radius: $border;
+        background-color: rgb(69, 173, 69);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.200);
+
+        &:hover{
+            background-color: rgb(70, 143, 70);
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.card-notas{
+    @include flex(row);
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    border-radius: $border;
+    margin: 10px;
+    min-width: 15vw;
+    max-width: 100vw;
+    word-wrap: break-word;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.200);
+
+    p{
+        padding: 10px;
+        min-width: 5vw;
+        max-width: 40vw;
+        word-wrap: break-word; 
+    }
+
+}
+
+.btnRemove{
+    background-color: transparent;
+    font-size: 3vh;
+    transition: $trans;
+    border-radius: $border;
+    margin: 4%;
+
+    &:hover{
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: $trans;
+    }
+
+}
+
+.btnEdit{
+    background-color: transparent;
+    font-size: 3vh;
+    transition: $trans;
+    border-radius: $border;
+    margin: 4%;
+
+    &:hover{
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: $trans;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .div-nota-add{
+        input{
+            width: 90%;
+            margin-bottom: 5%;
+        }
+        button{
+            width: 90%;
+        }
+    }
+    .card-notas{
+        p{
+            min-width: 5vw;
+            max-width: 100vw;
+        }
+    }
+  }
